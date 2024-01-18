@@ -1,14 +1,22 @@
+import Facebook from '@/public/icons/ic_facebook.svg'
+import Instagram from '@/public/icons/ic_instagram.svg'
 import MainIcon from '@/public/icons/ic_main_logo.svg'
 import Image from 'next/image'
 import styles from './footer.module.css'
 
 export default function Footer() {
 	return (
-		<footer className={styles.footer_container}>
-			<div>
+		<div className={styles.footer_container}>
+			<div className={styles.icons_container}>
 				<Image priority src={MainIcon} alt="wakyruna" />
-				<p>&copy; 2023 Waki Runa. Todos los derechos reservados | Si tienes dudas escríbenos a contacto@wakiruna.pe</p>
+				<div className={styles.only_icons}>
+					<Image priority className={styles.icons} src={Facebook} alt="facebook" />
+					<Image priority className={styles.icons} src={Instagram} alt="instagram" style={{ marginLeft: '20px' }} />
+				</div>
 			</div>
-		</footer>
+			<p className={styles.copy_right}>
+				&copy; 2023 Waki Runa. Todos los derechos reservados | Si tienes dudas escríbenos a <strong>contacto@wakiruna.pe</strong>
+			</p>
+		</div>
 	)
 }
