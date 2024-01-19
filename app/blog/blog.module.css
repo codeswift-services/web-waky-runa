@@ -1,0 +1,40 @@
+.container_top {
+	background-color: #eeebff;
+	margin: 0px;
+	padding: 12px;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+}
+
+.text_container {
+	margin-left: 300px;
+	width: 400px;
+	margin-top: 100px;
+	padding-bottom: 85px;
+}
+
+.meditate_person {
+	position: absolute;
+	top: 125px;
+	right: 300px;
+}
+
+.color_text {
+	color: #190d67;
+	font-size: 36px;
+}
+
+@keyframes appearUp {
+	from {
+		opacity: 0;
+		transform: translateY(60px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.text_container,
+.meditate_person {
+	animation: appearUp 1s ease-out;
+}
