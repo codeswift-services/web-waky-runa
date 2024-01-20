@@ -17,8 +17,11 @@ export default function blog() {
 					<Image priority className={style.firstImage} src={MediatePerson} alt="wakyruna" />
 				</div>
 			</div>
-			<div>
-				<TextCard />
+			<div className={style.cardContainer}>
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
+
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
 			</div>
 			<Footer />
 		</>

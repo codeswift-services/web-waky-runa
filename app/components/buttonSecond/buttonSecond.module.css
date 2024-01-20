@@ -2,17 +2,19 @@
 	display: inline-block;
 	padding: 10px 20px;
 	text-decoration: none;
-	color: #6f42c1; /* Color del texto morado */
-	background-color: #ffffff; /* Fondo blanco */
-	border: 2px solid #6f42c1; /* Borde morado */
-	border-radius: 4px;
-	font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
+	color: #6f42c1;
+	background-color: #ffffff;
+	border: 2px solid #6f42c1;
+	border-radius: 8px;
+	font-size: 16px;
 	cursor: pointer;
 	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+	width: 180px;
+	text-align: center;
 }
 
 .button:hover {
-	background-color: #6f42c1; /* Cambia el fondo a morado en el hover */
-	color: #ffffff; /* Cambia el color del texto a blanco en el hover */
-	border-color: #6f42c1; /* Cambia el color del borde a morado en el hover */
+	background-color: #6f42c1;
+	color: #ffffff;
+	border-color: #6f42c1;
 }

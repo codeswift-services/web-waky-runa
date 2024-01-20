@@ -38,3 +38,8 @@
 .meditate_person {
 	animation: appearUp 1s ease-out;
 }
+
+.cardContainer {
+	display: flex;
+	justify-content: center;
+}
