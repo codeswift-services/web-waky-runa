@@ -1,4 +1,33 @@
-
 .header_container {
-    background-color: red;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 43px;
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-bottom: 51px;
+}
+
+.header_links {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 36px;
+}
+
+.header_background {
+	background: linear-gradient(129deg, #5640c7 11.67%, #ae39dd 75.38%);
+}
+
+.link {
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.link_active {
+	color: #ffce00;
+	cursor: pointer;
 }
