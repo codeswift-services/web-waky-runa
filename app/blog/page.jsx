@@ -20,7 +20,16 @@ export default function blog() {
 			<div className={style.cardContainer}>
 				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
 				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
-
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
+			</div>
+			<div className={style.cardContainer}>
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
+			</div>
+			<div className={style.cardContainer}>
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
+				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
 				<TextCard date="Julio 2023" title="¿Cómo funciona las finanzas?" url="https://www.google.com/" />
 			</div>
 			<Footer />
