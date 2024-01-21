@@ -25,9 +25,12 @@
 	cursor: pointer;
 	font-size: 14px;
 	line-height: 20px;
+	font-weight: 500;
+	transition: all 400ms ease;
 }
 
 .link_active {
 	color: #ffce00;
 	cursor: pointer;
+	font-weight: 500;
 }

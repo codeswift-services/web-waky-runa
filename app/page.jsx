@@ -15,12 +15,19 @@ import SelectSimple from './components/select-simple/select-simple'
 import TextField from './components/textfield/textfield'
 import styles from './page.module.css'
 
+const MOCK_LINKS = [
+	{ name: 'Vacantes', path: '/vacancies' },
+	{ name: 'Blog', path: '/blog' },
+	{ name: '¿Quienes somos?', path: '/about' },
+	{ name: 'Inicia Sesíon', path: '/signin' }
+]
+
 export default function Page() {
 	const [value, setValue] = useState('')
 
 	return (
 		<div className={styles.home_container}>
-			<Header hasBackground={false} />
+			<Header hasBackground={false} links={MOCK_LINKS} />
 			<div className={`${styles.main_section} ${styles.limit_area}`}>
 				<div className={styles.main_section_info}>
 					<h1>Recluta con nosotros o encuentra empleo</h1>
