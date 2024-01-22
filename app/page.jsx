@@ -81,7 +81,7 @@ export default function Page() {
 					<h4 className={styles.title}>Conversa con nosotros</h4>
 					<span className={styles.subtitle}>Déjanos saber como podemos ayudarte</span>
 					<div className={styles.contact_section_info}>
-						<Image priority src={icPhone} alt="" />
+						<Image priority className={styles.contact_section_info_img} src={icPhone} alt="" />
 						<form className={styles.contact_form}>
 							<SelectSimple value={value} onChange={setValue} />
 							<TextField variant="ghost" label="Nombre y Apellido *" />

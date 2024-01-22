@@ -124,9 +124,16 @@
 /* contact section  */
 
 .background_contact_section {
+	padding-left: 2rem;
+	padding-right: 2rem;
 	background-color: #ebefff;
 	padding-top: 67px;
 	padding-bottom: 93px;
+}
+
+.contact_section_info_img {
+	width: 100%;
+	max-width: 500px;
 }
 
 .contact_section {
@@ -141,6 +148,12 @@
 	align-items: center;
 	justify-content: space-around;
 	align-items: flex-start;
+}
+
+@media screen and (max-width: 1000px) {
+	.contact_section_info {
+		margin-top: 20px;
+	}
 }
 
 /* contact form */
