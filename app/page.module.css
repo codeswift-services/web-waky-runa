@@ -80,15 +80,9 @@
 }
 
 .benefits_section {
+	position: relative;
 	margin-top: 140px;
 	text-align: center;
-}
-
-@media screen and (max-width: 1000px) {
-	.benefits_section {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
 }
 
 .title {
@@ -107,9 +101,11 @@
 .background_benefits_section {
 	padding-top: 41px;
 	background-color: #ebefff;
+	padding-bottom: 250px;
 }
 
 .benefits_section_cards {
+	position: absolute;
 	margin-top: 70px;
 	display: flex;
 	justify-content: space-around;
@@ -148,8 +144,8 @@
 }
 
 .background_howwork_section {
-	padding-top: 160px;
-	padding-bottom: 80px;
+	padding-top: 350px;
+	padding-bottom: 120px;
 	background-color: #fff;
 }
 
@@ -237,4 +233,22 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 35px;
+}
+@media screen and (max-width: 1000px) {
+	.background_benefits_section {
+		padding-bottom: 200px;
+	}
+
+	.benefits_section {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.benefits_section_cards {
+		position: inherit;
+	}
+
+	.background_howwork_section {
+		padding-top: 160px;
+	}
 }
