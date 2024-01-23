@@ -74,6 +74,7 @@ export default function Page() {
 				<div className={`${styles.howwork_section} ${styles.limit_area}`}>
 					<h4 className={styles.title}>¿Cómo funciona Waki Runa?</h4>
 					<span className={styles.subtitle}>Conoce en este video las herramientas y beneficios que Waki Runa tiene para ti</span>
+					<div className={styles.howwork_video}></div>
 				</div>
 			</div>
 			<div className={styles.background_contact_section}>

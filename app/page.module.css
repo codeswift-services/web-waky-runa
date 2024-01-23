@@ -149,12 +149,21 @@
 
 .background_howwork_section {
 	padding-top: 160px;
+	padding-bottom: 80px;
 	background-color: #fff;
+}
+
+.howwork_video {
+	background-color: #1d0d65;
+	width: 800px;
+	height: 500px;
 }
 
 .howwork_section {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	gap: 30px;
 }
