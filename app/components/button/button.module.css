@@ -7,7 +7,6 @@
 	display: flex;
 	padding: 8px 0 8px 0;
 	justify-content: space-around;
-	color: #2e198b;
 	text-align: center;
 	font-weight: 500;
 	line-height: 28px;
@@ -19,29 +18,42 @@
 	transition: 0.3s ease;
 }
 
-.btn:hover {
-	background: #ffcc00d2;
+.primary {
+	background: #ffce00;
+	color: #2e198b;
 }
-
-.width-100 {
-	max-width: 100px;
+.primary:hover {
+	background: #ffcc00d2;
 }
 
 .outline {
 	font-size: 16px;
 	border-radius: 8px;
-	border: 2px solid #6f42c1;
-	cursor: pointer;
-	width: 100%;
-	display: flex;
-	padding: 8px 0 8px 0;
-	justify-content: space-around;
+	background-color: transparent;
+	border: 3px solid #6f42c1;
 	color: #2e198b;
-	text-align: center;
-	font-weight: 500;
-	line-height: 28px;
+}
+.outline:hover {
+	background-color: #6f42c1;
+	color: #ffffff;
+	border-color: #6f42c1;
 }
 
+.secondary {
+	background-color: #6f42c1;
+	color: #ffffff;
+	border-color: #6f42c1;
+}
+.secondary:hover {
+	background-color: rgba(110, 66, 193, 0.67);
+}
+
+/* padding variant  */
+.mini {
+	padding: 2px 2px;
+}
+
+/* global animation  */
 .ripples {
 	position: absolute;
 	background: rgba(255, 253, 253, 0.69);

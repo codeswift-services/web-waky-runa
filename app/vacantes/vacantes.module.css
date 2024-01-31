@@ -1,0 +1,13 @@
+.background_main_section {
+	background-color: #eeebff;
+}
+
+.limit_area {
+	max-width: 960px;
+	widows: 100%;
+	margin: auto;
+}
+
+.main_section {
+	display: flex;
+}

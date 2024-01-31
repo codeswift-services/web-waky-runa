@@ -32,5 +32,12 @@
 .link_active {
 	color: #ffce00;
 	cursor: pointer;
-	font-weight: 500;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+	.benefits_section {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 }

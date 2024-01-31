@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './button.module.css'
 
-export default function Button({ children, w, outline }) {
+export default function Button({ children, w, outline, variant = 'primary', mini }) {
 	const [ripples, setRipples] = useState([])
 
 	const ripple = e => {
@@ -15,7 +15,7 @@ export default function Button({ children, w, outline }) {
 			x,
 			y,
 			size,
-			id: Date.now()
+			id: Date.now().valueOf()
 		}
 
 		setRipples([...ripples, newRipple])
@@ -26,7 +26,16 @@ export default function Button({ children, w, outline }) {
 	}
 
 	return (
-		<div onClick={ripple} className={`${outline ? styles.outline : styles.btn}`} style={{ maxWidth: w || '100%', position: 'relative' }}>
+		<div
+			onClick={ripple}
+			className={`
+        ${styles.btn}
+        ${outline ? styles.outline : styles.btn}
+        ${styles[variant]}
+        ${mini && styles.mini}
+      `}
+			style={{ maxWidth: w || '100%', position: 'relative' }}
+		>
 			{children}
 			{ripples.map(ripple => (
 				<span
