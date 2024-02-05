@@ -84,7 +84,7 @@ export default function Page() {
 					<div className={styles.contact_section_info}>
 						<Image priority className={styles.contact_section_info_img} src={icPhone} alt="" />
 						<form className={styles.contact_form}>
-							<SelectSimple value={value} onChange={setValue} />
+							<SelectSimple bg="#ebefff" value={value} onChange={setValue} />
 							<TextField variant="ghost" label="Nombre y Apellido *" />
 							<TextField variant="ghost" label="Email *" />
 							<TextField variant="ghost" label="Telefono *" />

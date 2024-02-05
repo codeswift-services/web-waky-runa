@@ -9,8 +9,12 @@ const MOCK_OPTIONS = [
 	{ id: 2, value: 'valor 2' }
 ]
 
-export default function SelectSimple({ options = MOCK_OPTIONS, value = '', onChange }) {
+export default function SelectSimple({ options = MOCK_OPTIONS, value = '', onChange, bg = '#fff', w }) {
 	const [focus, setFocus] = useState(false)
+
+	const customStyles = {
+		backgroundColor: bg
+	}
 
 	const handleBlur = e => {
 		const currentTarget = e.currentTarget
@@ -28,16 +32,21 @@ export default function SelectSimple({ options = MOCK_OPTIONS, value = '', onCha
 	}
 
 	return (
-		<label className={styles.select_label}>
+		<label
+			className={styles.select_label}
+			style={{
+				maxWidth: w ?? '100%'
+			}}
+		>
 			<div tabIndex="1" onBlur={handleBlur} placeholder=" " className={styles.select_input} onClick={() => setFocus(true)}>
 				{options.find(option => option.id === value)?.value || ''}
 			</div>
-			<span tabIndex="1" onBlur={handleBlur} onClick={() => setFocus(true)} className={`${styles.select_placeholder} ${value !== '' && styles.focus} `}>
+			<span tabIndex="1" style={customStyles} onBlur={handleBlur} onClick={() => setFocus(true)} className={`${styles.select_placeholder} ${value !== '' && styles.focus} `}>
 				Selecciona un tema
 			</span>
 			<Image className={`${styles.select_arrow} ${focus && styles.rotate}`} priority src={icArrowDown} alt="" />
 
-			<div className={`${styles.options} ${focus && styles.opacity} `}>
+			<div style={customStyles} className={`${styles.options} ${focus && styles.opacity} `}>
 				{options.map((option, index) => (
 					<span onClick={() => onClick(option.id)} key={index}>
 						{option.value}

@@ -1,0 +1,12 @@
+.baseTable {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.basetableCleanFilter {
+	text-decoration: underline;
+	color: #5840c7;
+	cursor: pointer;
+}
