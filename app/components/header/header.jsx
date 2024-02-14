@@ -19,6 +19,7 @@ export default function Header({ links = [], hasBackground = true }) {
 			<Link href="/">
 				<Image priority src={MainIcon} alt="wakyruna" />
 			</Link>
+			<div className={styles.header_menu_btn}>button</div>
 			<div className={styles.header_links}>
 				{links.map((link, index) => (
 					<Link href={link.path} className={`${styles.link} ${pathname === link.path && styles.link_active}`} key={index}>

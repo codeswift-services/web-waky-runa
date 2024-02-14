@@ -13,15 +13,17 @@ export default function BaseTableFilter() {
 	}
 
 	return (
-		<div className={styles.baseTable}>
-			<SelectSimple w={'210px'} value={salary} onChange={setSalary} />
-			<SelectSimple w={'210px'} value={state} onChange={setState} />
-			<Button w={'95px'} variant="secondary">
-				Filtrar
-			</Button>
-			<span onClick={onReset} className={styles.basetableCleanFilter}>
-				Limpiar filtro
-			</span>
+		<div className={styles.base_table_main}>
+			<div className={styles.baseTable}>
+				<SelectSimple w={'210px'} value={salary} onChange={setSalary} />
+				<SelectSimple w={'210px'} value={state} onChange={setState} />
+				<Button w={'95px'} variant="secondary">
+					Filtrar
+				</Button>
+				<span onClick={onReset} className={styles.basetableCleanFilter}>
+					Limpiar filtro
+				</span>
+			</div>
 		</div>
 	)
 }
