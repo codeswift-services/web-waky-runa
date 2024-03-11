@@ -13,7 +13,7 @@ import styles from './header.module.css'
  * @param {string} hasBackground - header links
  */
 
-export default function Header({ links = [], hasBackground = true, isActiveBtn = true }) {
+export default function Header({ links = [], hasBackground = true, isActiveBtn = true, onAction }) {
 	const pathname = usePathname()
 	const [show, setShow] = useState(true)
 

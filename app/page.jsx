@@ -25,7 +25,7 @@ const MOCK_LINKS = [
 
 export default function Page() {
 	const [value, setValue] = useState('')
-	const [stateLoginModal, setStateLoginModal] = useState(true)
+	const [stateLoginModal, setStateLoginModal] = useState(false)
 
 	const closeLoginModal = () => setStateLoginModal(false)
 	const openLoginModal = () => setStateLoginModal(true)
