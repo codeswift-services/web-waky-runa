@@ -29,6 +29,7 @@ export default function Button({ children, w, outline, variant = 'primary', mini
 		<div
 			onClick={ripple}
 			className={`
+        btn
         ${styles.btn}
         ${outline ? styles.outline : styles.btn}
         ${styles[variant]}
