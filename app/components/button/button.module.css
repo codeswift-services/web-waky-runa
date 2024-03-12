@@ -18,6 +18,10 @@
 	transition: 0.3s ease;
 }
 
+.btn:hover {
+	cursor: pointer !important;
+}
+
 .primary {
 	background: #ffce00;
 	color: #2e198b;
@@ -46,6 +50,15 @@
 }
 .secondary:hover {
 	background-color: rgba(110, 66, 193, 0.67);
+}
+
+.ghost {
+	background-color: #ffffff;
+	border: 1px solid #303030;
+}
+
+.ghost:hover {
+	background-color: #909090;
 }
 
 /* padding variant  */

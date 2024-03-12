@@ -1,9 +1,13 @@
+import IcEmail from '@/public/icons/ic_email.svg'
+import IcFacebook from '@/public/icons/ic_facebook_circle.svg'
+import IcGoogle from '@/public/icons/ic_google.svg'
+import Image from 'next/image'
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
 import Button from '../../button/button'
 import styles from './login-model.module.css'
 
-export const LoginModal = ({ state, onClose }) => {
+export const LoginModal = ({ state, onClose, onRegisterClick }) => {
 	return (
 		<Modal
 			open={state}
@@ -16,14 +20,28 @@ export const LoginModal = ({ state, onClose }) => {
 			<div className={styles.content}>
 				<h2>Inicia sesión</h2>
 				<div className={styles.content_btns}>
-					<Button variant="outline">Continuar con Google</Button>
-					<Button variant="outline">Continuar con Facebook</Button>
-					<Button variant="outline">Continuar con email</Button>
+					<Button variant="ghost">
+						<div className={styles.login_btn}>
+							<Image src={IcGoogle} alt="google" className={styles.google_image} />
+							<span>Continuar con Google</span>
+						</div>
+					</Button>
+					<Button variant="ghost">
+						<div className={styles.login_btn}>
+							<Image src={IcFacebook} alt="facebook" />
+							<span>Continuar con Facebook</span>
+						</div>
+					</Button>
+					<Button variant="ghost">
+						<div className={styles.login_btn}>
+							<Image src={IcEmail} alt="email" />
+							<span>Continuar con email</span>
+						</div>
+					</Button>
 				</div>
-
 				<div>
 					<span>¿Aún no tienes una cuenta?</span>
-					<a>Regístrate aquí</a>
+					<a onClick={onRegisterClick}>Regístrate aquí</a>
 				</div>
 			</div>
 		</Modal>

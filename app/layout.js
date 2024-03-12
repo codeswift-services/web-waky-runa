@@ -1,4 +1,5 @@
 import { Montserrat } from 'next/font/google'
+import 'react-responsive-modal/styles.css'
 import './global.css'
 
 const interMontserrat = Montserrat({

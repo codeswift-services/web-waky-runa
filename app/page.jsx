@@ -11,7 +11,6 @@ import Button from './components/button/button'
 import DropDown from './components/dropdown/dropdown'
 import Footer from './components/footer/footer'
 import Header from './components/header/header'
-import { LoginModal } from './components/modal/login-modal/login-modal'
 import SelectSimple from './components/select-simple/select-simple'
 import TextField from './components/textfield/textfield'
 import styles from './page.module.css'
@@ -25,14 +24,8 @@ const MOCK_LINKS = [
 
 export default function Page() {
 	const [value, setValue] = useState('')
-	const [stateLoginModal, setStateLoginModal] = useState(false)
-
-	const closeLoginModal = () => setStateLoginModal(false)
-	const openLoginModal = () => setStateLoginModal(true)
-
 	return (
 		<div className={styles.home_container}>
-			<LoginModal state={stateLoginModal} onClose={closeLoginModal} />
 			<Header hasBackground={false} links={MOCK_LINKS} onAction={() => openLoginModal()} />
 			<div className={`${styles.main_section} ${styles.limit_area}`}>
 				<div className={styles.main_section_info}>

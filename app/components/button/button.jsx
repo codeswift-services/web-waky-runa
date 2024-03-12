@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './button.module.css'
 
-export default function Button({ children, w, onClick, outline, variant = 'primary', mini }) {
+export default function Button({ children, w, onClick = () => {}, outline, variant = 'primary', mini }) {
 	const [ripples, setRipples] = useState([])
 
 	const ripple = e => {

@@ -5,7 +5,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { RegisterModal } from '..//modal/register-modal/register-model'
 import Button from '../button/button'
+import { LoginModal } from '../modal/login-modal/login-modal'
 import styles from './header.module.css'
 
 /**
@@ -13,12 +15,35 @@ import styles from './header.module.css'
  * @param {string} hasBackground - header links
  */
 
-export default function Header({ links = [], hasBackground = true, isActiveBtn = true, onAction }) {
+export default function Header({ links = [], hasBackground = true, isActiveBtn = true }) {
 	const pathname = usePathname()
 	const [show, setShow] = useState(true)
 
+	/**
+	 * actions login modal
+	 */
+	const [stateLoginModal, setStateLoginModal] = useState(false)
+	const closeLoginModal = () => setStateLoginModal(false)
+	const openLoginModal = () => setStateLoginModal(true)
+
+	/**
+	 * actions register modal
+	 */
+	const [stateRegisterModal, setStateRegisterModal] = useState(false)
+	const closeRegisterModal = () => setStateRegisterModal(false)
+	const openRegisterModal = () => setStateRegisterModal(true)
+
 	return (
 		<div className={`${hasBackground && styles.header_background} ${styles.header_container}`}>
+			<LoginModal
+				state={stateLoginModal}
+				onClose={closeLoginModal}
+				onRegisterClick={() => {
+					closeLoginModal()
+					openRegisterModal()
+				}}
+			/>
+			<RegisterModal state={stateRegisterModal} onClose={closeRegisterModal} />
 			<Link href="/">
 				<Image priority src={MainIcon} alt="wakyruna" />
 			</Link>
@@ -32,7 +57,7 @@ export default function Header({ links = [], hasBackground = true, isActiveBtn =
 					</Link>
 				))}
 				{isActiveBtn && (
-					<Button w={'100px'} onClick={() => onAction()}>
+					<Button w={'100px'} onClick={() => openLoginModal()}>
 						Acceder
 					</Button>
 				)}
