@@ -15,7 +15,7 @@
 }
 .main_section_info {
 	width: 100%;
-	max-width: 488px;
+	max-width: 600px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -27,7 +27,6 @@
 	/* background: linear-gradient(129deg, #5640c7 11.67%, #ae39dd 75.38%); */
 }
 .text_container {
-	margin-left: 300px;
 	width: 400px;
 	margin-top: 100px;
 	padding-bottom: 85px;
@@ -63,7 +62,7 @@
 	align-items: center;
 	width: 100%;
 	position: absolute;
-	top: 1830px; /* Ajustar según sea necesario */
+	top: 1528px; /* Ajustar según sea necesario */
 	left: 290px; /* Ajustar según sea necesario */
 }
 
@@ -117,7 +116,7 @@
 .background_benefits_section {
 	padding-top: 45px;
 	background-color: #ffffff;
-	padding-bottom: 150px;
+	padding-bottom: 140px;
 }
 .background_start {
 	padding: 0px;
@@ -125,13 +124,14 @@
 	padding-bottom: 230px;
 }
 .cardGrid {
-	margin-top: 60px;
-	margin-left: 380px; /* Margen a la izquierda */
+	margin-top: 50px;
+	align-items: center;
+	justify-content: center;
 	margin-right: 380px;
+	margin-left: 380px;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 10px;
-	/* Espacio entre las tarjetas */
 }
 .main_section {
 	display: flex;
@@ -165,6 +165,10 @@
 	color: #190d67;
 	font-size: 25px;
 	line-height: 20px;
+}
+.main_section_info p3 {
+	color: #190d67;
+	font-size: 40px;
 }
 .main_section2 p {
 	color: #190d67;
@@ -225,9 +229,13 @@
 }
 
 .textCenter {
-	padding-top: 120px;
+	padding-top: 100px;
 	cursor: pointer;
 	position: relative;
 	transition: ease 0.8s;
 	text-align: center;
+}
+
+.textCenter p {
+	font-size: 45px;
 }

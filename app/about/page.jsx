@@ -1,15 +1,23 @@
 'use client'
 import BackPack from '@/public/icons/ic_backpack.svg'
+import BookPerson from '@/public/icons/ic_book_person.svg'
 import ComputerPerson from '@/public/icons/ic_computer_person.svg'
+
+import Focus from '@/public/icons/ic_focus.svg'
+import Graph from '@/public/icons/ic_graph.svg'
 import Search from '@/public/icons/ic_magnifying.svg'
-import MainIcon from '@/public/icons/ic_meditate_person.svg'
-import Image from 'next/image'
 import Button from '../components/button/button'
-import TextCard from '../components/cardBlog/cardBlog'
+
+import Heart from '@/public/icons/ic_heart.svg'
+import Like from '@/public/icons/ic_like.svg'
+import MiraDark from '@/public/icons/ic_mira_dark.svg'
+import Plate from '@/public/icons/ic_plate_dark.svg'
+import Image from 'next/image'
 import Footer from '../components/footer/footer'
 import Header from '../components/header/header'
 import Scroll from '../components/scroll-icon/scroll-icon'
-import style from './blog.module.css'
+import TextLine from '../components/textLine/textLine'
+import style from './about.module.css'
 
 const MOCK_LINKS = [
 	{ name: 'Blog', path: '/blog' },
@@ -18,43 +26,46 @@ const MOCK_LINKS = [
 	{ name: 'Inicia Sesíon', path: '/signin' }
 ]
 
-export default function blog() {
+export default function About() {
 	const cardData = [
-		{ date: 'Julio 2023', title: 'Título de la primera tarjeta', url: 'https://www.ejemplo1.com' },
-		{ date: 'Agosto 2023', title: 'Título de la segunda tarjeta', url: 'https://www.ejemplo2.com' },
-		{ date: 'Septiembre 2023', title: 'Título de la tercera tarjeta', url: 'https://www.ejemplo3.com' },
-		{ date: 'Octubre 2023', title: 'Título de la cuarta tarjeta', url: 'https://www.ejemplo4.com' },
-		{ date: 'Noviembre 2023', title: 'Título de la quinta tarjeta', url: 'https://www.ejemplo5.com' },
-		{ date: 'Diciembre 2023', title: 'Título de la sexta tarjeta', url: 'https://www.ejemplo6.com' },
-		{ date: 'Enero 2024', title: 'Título de la séptima tarjeta', url: 'https://www.ejemplo7.com' },
-		{ date: 'Febrero 2024', title: 'Título de la octava tarjeta', url: 'https://www.ejemplo8.com' },
-		{ date: 'Marzo 2024', title: 'Título de la novena tarjeta', url: 'https://www.ejemplo9.com' }
+		{ image: Graph, title: 'Gestión orientada a nuestros <br /> Clientes y Postulantes', url: 'https://www.ejemplo1.com' },
+		{ image: Heart, image: Heart, title: 'Pasión por lo que hacemos para lograr <br /> nuestras metas con nuestros clientes', url: 'https://www.ejemplo6.com' },
+		{ image: Plate, title: 'Calidad para generar valor en cada <br /> uno de nuestros clientes', url: 'https://www.ejemplo2.com' },
+		{ image: Focus, title: 'Innovación en nuevas herramientas y<br /> buenas prácticas de trabajo', url: 'https://www.ejemplo4.com' },
+		{ image: MiraDark, title: 'Compromiso en la busqueda de la <br />excelencia y mejora continua', url: 'https://www.ejemplo3.com' },
+		{ image: Like, title: 'Ética y Responsabilidad basado el <br />respeto, la igualdad y la confianza.', url: 'https://www.ejemplo5.com' }
 	]
 	return (
 		<div className={style.home_container}>
 			<Header hasBackground={true} links={MOCK_LINKS} />
 			<div className={`${style.main_section} ${style.limit_area}`}>
 				<div className={style.main_section_info}>
-					<h1>Trabajemos juntos en tu crecimiento</h1>
+					<p3>
+						Waki Runa Recluta,
+						<br />
+						selecciona y capacita
+					</p3>
 					<p>
-						Ofrecemos temas relacionados que podran ayudarte a <br />
-						estar en constate actualización que te permitan estar a <br />
-						la vanguardia del mercado
+						<strong>Ofrecemos tiempo, calidad y precio. </strong>Encontrando y garantizando
+						<br />
+						personal reconocido por la calidad de su trabajo y la agilidad de nuestro <br />
+						proceso, que contribuye con el éxito de nuestros clientes.
 					</p>
 				</div>
 				<div>
-					<Image priority src={MainIcon} alt="" />
+					<Image priority src={BookPerson} alt="" />
 				</div>
 			</div>
 			<div className={style.background_benefits_section}>
 				<Scroll />
 				<div className={style.textCenter}>
-					<h2>Escoge el tema de tu interés</h2>
+					<p>Nuestros pilares de especialización</p>
+					<p2>conoce un poco más sobre la satisfacción de quienes trabajan con nosotros</p2>
 				</div>
 				<div className={style.cardGrid}>
 					{cardData.map((card, index) => (
 						<div key={index} className={style.cardContainer}>
-							<TextCard date={card.date} title={card.title} url={card.url} />
+							<TextLine image={card.image} title={card.title} />
 						</div>
 					))}
 				</div>
