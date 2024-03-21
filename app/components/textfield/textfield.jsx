@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './textfield.module.css'
 
 /**
@@ -5,21 +6,25 @@ import styles from './textfield.module.css'
  * @param {string} variant - {outlined|ghost}
  * @param {boolean} textarea -
  */
-export default function TextField({ textarea, label, value, onChange, variant, bg }) {
-	const custonBg = {
+const TextField = React.forwardRef(({ textarea, label, name, variant, bg, type, register }, ref) => {
+	const customBg = {
 		backgroundColor: bg
 	}
+
+	const registerField = register ? register : () => {}
 
 	return (
 		<label className={`${styles.textfield_label} ${styles[variant]}`}>
 			{textarea ? (
-				<textarea maxLength="540" className={`${styles.textfield_input}`} placeholder=" " value={value} onChange={onChange} />
+				<textarea ref={ref} maxLength="540" className={`${styles.textfield_input}`} placeholder=" " name={name} />
 			) : (
-				<input className={`${styles.textfield_input}`} placeholder=" " value={value} onChange={onChange} />
+				<input ref={ref} type={type} className={`${styles.textfield_input}`} placeholder=" " {...registerField(name, { required: true })} />
 			)}
-			<span className={styles.textfield_placeholder} style={custonBg}>
+			<span className={styles.textfield_placeholder} style={customBg}>
 				{label}
 			</span>
 		</label>
 	)
-}
+})
+
+export default TextField

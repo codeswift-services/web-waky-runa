@@ -3,9 +3,8 @@ import IcFacebook from '@/public/icons/ic_facebook_circle.svg'
 import IcGoogle from '@/public/icons/ic_google.svg'
 import Image from 'next/image'
 import { Modal } from 'react-responsive-modal'
-import 'react-responsive-modal/styles.css'
+import styles from 'react-responsive-modal/styles.css'
 import Button from '../../button/button'
-import styles from './login-model.module.css'
 
 export const LoginModal = ({ state, onClose, onRegisterClick }) => {
 	return (

@@ -26,7 +26,7 @@ export default function Button({ children, w, onClick = () => {}, outline, varia
 	}
 
 	return (
-		<div
+		<button
 			onClick={e => {
 				ripple(e)
 				onClick()
@@ -53,6 +53,6 @@ export default function Button({ children, w, onClick = () => {}, outline, varia
 					}}
 				/>
 			))}
-		</div>
+		</button>
 	)
 }
