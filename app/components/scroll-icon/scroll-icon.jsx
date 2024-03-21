@@ -5,7 +5,9 @@ import styles from './scroll-icon.module.css'
 export default function Scroll({ label = 'Conoce más' }) {
 	return (
 		<div className={styles.scroll}>
-			<span>{label}</span>
+			<span>
+				<strong>{label}</strong>
+			</span>
 			<div>
 				<Image className="arrow" alt="arrow" src={icScroll} />
 				<Image className="arrow" alt="arrow" src={icScroll} />
