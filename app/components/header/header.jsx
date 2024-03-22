@@ -1,13 +1,18 @@
 'use client'
+import { useLoginStore } from '@/app/lib/stores/login-store'
 import MainIcon from '@/public/icons/ic_main_logo.svg'
 import icMenu from '@/public/icons/ic_menu.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { RegisterModal } from '..//modal/register-modal/register-model'
 import Button from '../button/button'
 import { LoginModal } from '../modal/login-modal/login-modal'
+import { LoginStepOne } from '../modal/login-modal/step-one/login-step-one'
+import { LookingPersonnelStepOne } from '../modal/register-modal/looking-personnel/step-one/looking-personnel-step-one'
+import { RegisterSelectOptionModal } from '../modal/register-modal/options/register-select-option-model'
+import { WantToworkStepOne } from '../modal/register-modal/want-to-work/step-one/want-to-work-step-one'
+import { WantToWorkStepTwo } from '../modal/register-modal/want-to-work/step-two/want-to-work-step-two'
 import styles from './header.module.css'
 
 /**
@@ -22,28 +27,17 @@ export default function Header({ links = [], hasBackground = true, isActiveBtn =
 	/**
 	 * actions login modal
 	 */
-	const [stateLoginModal, setStateLoginModal] = useState(false)
-	const closeLoginModal = () => setStateLoginModal(false)
-	const openLoginModal = () => setStateLoginModal(true)
-
-	/**
-	 * actions register modal
-	 */
-	const [stateRegisterModal, setStateRegisterModal] = useState(false)
-	const closeRegisterModal = () => setStateRegisterModal(false)
-	const openRegisterModal = () => setStateRegisterModal(true)
+	const { isOpen, setLoginState } = useLoginStore(state => state)
 
 	return (
+		// <RegisterStoreProvider>
 		<div className={`${hasBackground && styles.header_background} ${styles.header_container}`}>
-			<LoginModal
-				state={stateLoginModal}
-				onClose={closeLoginModal}
-				onRegisterClick={() => {
-					closeLoginModal()
-					openRegisterModal()
-				}}
-			/>
-			<RegisterModal state={stateRegisterModal} onClose={closeRegisterModal} />
+			<LoginStepOne />
+			<LoginModal />
+			<WantToworkStepOne />
+			<RegisterSelectOptionModal />
+			<LookingPersonnelStepOne />
+			<WantToWorkStepTwo />
 			<Link href="/">
 				<Image priority src={MainIcon} alt="wakyruna" />
 			</Link>
@@ -57,11 +51,12 @@ export default function Header({ links = [], hasBackground = true, isActiveBtn =
 					</Link>
 				))}
 				{isActiveBtn && (
-					<Button w={'100px'} onClick={() => openLoginModal()}>
+					<Button w={'100px'} onClick={() => setLoginState(true)}>
 						Acceder
 					</Button>
 				)}
 			</div>
 		</div>
+		// </RegisterStoreProvider>
 	)
 }

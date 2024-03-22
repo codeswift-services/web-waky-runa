@@ -34,3 +34,14 @@
 	width: 30px;
 	height: auto;
 }
+
+.footer_register_redirect {
+	display: flex;
+	gap: 20px;
+}
+
+.footer_register_redirect a {
+	color: #2e198b;
+	font-weight: bold;
+	cursor: pointer;
+}
