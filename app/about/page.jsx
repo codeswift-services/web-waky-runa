@@ -1,7 +1,9 @@
 'use client'
-import BackPack from '@/public/icons/ic_backpack.svg'
-import BookPerson from '@/public/icons/ic_book_person.svg'
+import BackPack from './../../public/icons/ic_backpack.svg'
+
+// import BackPack from '@/public/icons/ic_backpack.svg'
 import ComputerPerson from '@/public/icons/ic_computer_person.svg'
+import BookPerson from './../../public/icons/ic_book_person.svg'
 
 import Focus from '@/public/icons/ic_focus.svg'
 import Graph from '@/public/icons/ic_graph.svg'

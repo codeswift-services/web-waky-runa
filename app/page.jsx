@@ -1,4 +1,5 @@
 'use client'
+
 import icFolder from '@/public/icons/ic_folder.svg'
 import icMira from '@/public/icons/ic_mira.svg'
 import icPen from '@/public/icons/ic_pen.svg'

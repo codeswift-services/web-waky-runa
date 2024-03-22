@@ -1,5 +1,7 @@
+'use client'
 import { Montserrat } from 'next/font/google'
 import 'react-responsive-modal/styles.css'
+import { Providers } from './Providers'
 import './global.css'
 
 const interMontserrat = Montserrat({
@@ -7,15 +9,12 @@ const interMontserrat = Montserrat({
 	variable: '--font-montserrat'
 })
 
-export const metadata = {
-	title: 'WakyRuna',
-	description: 'WakyRuna'
-}
-
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={interMontserrat.variable}>{children}</body>
+			<Providers>
+				<body className={interMontserrat.variable}>{children}</body>
+			</Providers>
 		</html>
 	)
 }

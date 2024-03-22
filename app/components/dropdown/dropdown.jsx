@@ -1,4 +1,6 @@
-import icArrowDown from '@/public/icons/ic_arrow_down.svg'
+// import icArrowDown from '@/public/icons/ic_arrow_down.svg'
+import icArrowDown from '../../../public/icons/ic_arrow_down.svg'
+
 import Image from 'next/image'
 import { useState } from 'react'
 import styles from './dropdown.module.css'

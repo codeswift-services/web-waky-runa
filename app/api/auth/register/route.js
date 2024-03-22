@@ -4,7 +4,6 @@ import db from '../../../lib/db'
 export async function POST(request) {
 	try {
 		const data = await request.json()
-
 		const userFound = await db.user.findUnique({
 			where: { email: data.email }
 		})
@@ -19,19 +18,34 @@ export async function POST(request) {
 				}
 			)
 		}
+		if (data.gmail === 1) {
+			const newUser = await db.user.create({
+				data: {
+					fullname: data.fullname,
+					email: data.email,
+					gmail: data.gmail
+				}
+			})
+			console.log('Nuevo usuario registrado:', newUser)
 
-		const hashedPassword = await bcrypt.hash(data.password, 10)
-		const newUser = await db.user.create({
-			data: {
-				name: data.name,
-				lastName: data.lastName,
-				email: data.email,
-				password: hashedPassword
-			}
-		})
+			const { password: _, ...user } = newUser
 
-		const { password: _, ...user } = newUser
-		return NextResponse.json(user)
+			return NextResponse.json(user)
+		} else {
+			console.log('first')
+			const hashedPassword = await bcrypt.hash(data.password, 10)
+			const newUser = await db.user.create({
+				data: {
+					name: data.name,
+					lastName: data.lastName,
+					email: data.email,
+					password: hashedPassword
+				}
+			})
+
+			const { password: _, ...user } = newUser
+			return NextResponse.json(user)
+		}
 	} catch (error) {
 		return NextResponse.json(
 			{

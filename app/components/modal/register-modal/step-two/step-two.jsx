@@ -36,11 +36,7 @@ export const RegisterStepTwo = () => {
 		<>
 			<h2>Regístrate como candidato</h2>
 			<p>Ingresa tus datos y comienza a optimizar tu tiempo</p>
-			{/* <form onSubmit={handleSubmit(onSubmit)}>
-				<TextField label="Nombre" name="lastName" register={register} type="text" />
-				<button type="submit">Enviar</button>
-			</form> */}
-			{/* <input type="text" {...register('name', { required: true })} /> */}
+
 			<form onSubmit={onSubmit} className={styles.content_inputs}>
 				<TextField label="Nombre" name="name" type="text" register={register} />
 				<TextField label="Apellido" name="lastName" type="text" register={register} />
