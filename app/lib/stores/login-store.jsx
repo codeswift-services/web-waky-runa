@@ -9,5 +9,7 @@ export const useLoginStore = create()(set => ({
 	isOpen: false,
 	setLoginState: value => set({ isOpen: value }),
 	isOpenStepOne: false,
-	setStepOneState: value => set({ isOpenStepOne: value })
+	setStepOneState: value => set({ isOpenStepOne: value }),
+	isOpenRecoverPassword: false,
+	setRecoverPasswordState: value => set({ isOpenRecoverPassword: value })
 }))

@@ -10,7 +10,7 @@ import { useMemo } from 'react'
 import Modal from 'react-responsive-modal'
 import styles from './want-to-work-step-one.module.css'
 
-export const WantToworkStepOne = () => {
+export const WantToWorkStepOne = () => {
 	const { setStateModal, registerMode, setStep, setRegisterMode } = useRegisterStore(state => state)
 	const { setLoginState } = useLoginStore(state => state)
 

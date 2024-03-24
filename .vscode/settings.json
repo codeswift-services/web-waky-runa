@@ -15,5 +15,6 @@
 	"[properties]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
-	"discord.enabled": true
+	"discord.enabled": true,
+	"cSpell.words": ["wakyruna"]
 }

@@ -9,9 +9,10 @@ import { useState } from 'react'
 import Button from '../button/button'
 import { LoginModal } from '../modal/login-modal/login-modal'
 import { LoginStepOne } from '../modal/login-modal/step-one/login-step-one'
+import { RecoverPassword } from '../modal/recover-password/recover-password'
 import { LookingPersonnelStepOne } from '../modal/register-modal/looking-personnel/step-one/looking-personnel-step-one'
 import { RegisterSelectOptionModal } from '../modal/register-modal/options/register-select-option-model'
-import { WantToworkStepOne } from '../modal/register-modal/want-to-work/step-one/want-to-work-step-one'
+import { WantToWorkStepOne } from '../modal/register-modal/want-to-work/step-one/want-to-work-step-one'
 import { WantToWorkStepTwo } from '../modal/register-modal/want-to-work/step-two/want-to-work-step-two'
 import styles from './header.module.css'
 
@@ -30,13 +31,15 @@ export default function Header({ links = [], hasBackground = true, isActiveBtn =
 	const { isOpen, setLoginState } = useLoginStore(state => state)
 
 	return (
-		// <RegisterStoreProvider>
 		<div className={`${hasBackground && styles.header_background} ${styles.header_container}`}>
-			<LoginStepOne />
+			{/* // login modals  */}
+			<RecoverPassword />
 			<LoginModal />
-			<WantToworkStepOne />
+			<LoginStepOne />
+			{/* // register modals */}
 			<RegisterSelectOptionModal />
 			<LookingPersonnelStepOne />
+			<WantToWorkStepOne />
 			<WantToWorkStepTwo />
 			<Link href="/">
 				<Image priority src={MainIcon} alt="wakyruna" />
@@ -57,6 +60,5 @@ export default function Header({ links = [], hasBackground = true, isActiveBtn =
 				)}
 			</div>
 		</div>
-		// </RegisterStoreProvider>
 	)
 }

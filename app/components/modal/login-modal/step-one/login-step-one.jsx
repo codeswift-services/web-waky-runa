@@ -8,7 +8,7 @@ import Modal from 'react-responsive-modal'
 import styles from './login-step-one.module.css'
 
 export const LoginStepOne = () => {
-	const { isOpenStepOne, setStepOneState } = useLoginStore(state => state)
+	const { isOpenStepOne, setStepOneState, setRecoverPasswordState } = useLoginStore(state => state)
 	const { setMainState, setRegisterMode } = useRegisterStore(state => state)
 
 	return (
@@ -22,11 +22,19 @@ export const LoginStepOne = () => {
 		>
 			<div className={styles.content}>
 				<Image priority src={MainIcon} alt="wakyruna" />
-				<h2>Inicia sesiónomo candidato</h2>
+				<h2>Inicia sesión como candidato</h2>
 				<div className={styles.content_inputs}>
 					<TextField label="Correo electronico" />
 					<TextField label="Contraseña" />
-					<span className={styles.recover_password}>¿Olvidaste tu contraseña?</span>
+					<span
+						onClick={() => {
+							setStepOneState(false)
+							setRecoverPasswordState(true)
+						}}
+						className={styles.recover_password}
+					>
+						¿Olvidaste tu contraseña?
+					</span>
 					<Button> Iniciar Sesion</Button>
 				</div>
 				<div
