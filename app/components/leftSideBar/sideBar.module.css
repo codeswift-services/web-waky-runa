@@ -1,6 +1,7 @@
 .sidebar_links {
-	width: 16%;
-	height: 850px;
+	width: 100%;
+	max-width: 500px;
+	height: 800px;
 	display: flex;
 	flex-direction: column;
 	align-items: right;
@@ -47,4 +48,10 @@
 	font-weight: bold;
 	font-size: 25px;
 	color: white;
+}
+
+.user_detail {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
