@@ -32,7 +32,6 @@ export async function POST(request) {
 
 			return NextResponse.json(user)
 		} else {
-			console.log('first')
 			const hashedPassword = await bcrypt.hash(data.password, 10)
 			const newUser = await db.user.create({
 				data: {

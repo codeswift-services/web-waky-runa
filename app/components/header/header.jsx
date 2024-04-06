@@ -6,7 +6,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import Button from '../button/button'
 import { LoginModal } from '../modal/login-modal/login-modal'
 import { LoginStepOne } from '../modal/login-modal/step-one/login-step-one'
 import { RecoverPassword } from '../modal/recover-password/recover-password'
@@ -53,11 +52,11 @@ export default function Header({ links = [], hasBackground = true, isActiveBtn =
 						{link.name}
 					</Link>
 				))}
-				{isActiveBtn && (
+				{/* {isActiveBtn && (
 					<Button w={'100px'} onClick={() => setLoginState(true)}>
 						Acceder
 					</Button>
-				)}
+				)} */}
 			</div>
 		</div>
 	)

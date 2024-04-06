@@ -19,8 +19,8 @@ import styles from './page.module.css'
 const MOCK_LINKS = [
 	{ name: 'Vacantes', path: '/vacantes' },
 	{ name: 'Blog', path: '/blog' },
-	{ name: '¿Quienes somos?', path: '/about' },
-	{ name: 'Inicia Sesíon', path: '/signin' }
+	{ name: '¿Quienes somos?', path: '/about' }
+	// { name: 'Inicia Sesíon', path: '/signin' }
 ]
 
 export default function Page() {

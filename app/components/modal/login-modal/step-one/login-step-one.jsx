@@ -3,13 +3,39 @@ import TextField from '@/app/components/textfield/textfield'
 import { useLoginStore } from '@/app/lib/stores/login-store'
 import { LOOKING_PERSONNEL, useRegisterStore } from '@/app/lib/stores/register-store'
 import MainIcon from '@/public/icons/ic_main_logo_alt.svg'
+import { signIn } from 'next-auth/react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useForm } from 'react-hook-form'
 import Modal from 'react-responsive-modal'
 import styles from './login-step-one.module.css'
 
 export const LoginStepOne = () => {
 	const { isOpenStepOne, setStepOneState, setRecoverPasswordState } = useLoginStore(state => state)
 	const { setMainState, setRegisterMode } = useRegisterStore(state => state)
+	const {
+		register,
+		handleSubmit,
+		formState: { errors }
+	} = useForm()
+
+	const router = useRouter()
+
+	const onSubmit = handleSubmit(async data => {
+		console.log(data)
+		const res = await signIn('credentials', {
+			email: data.email,
+			password: data.password,
+			redirect: false
+		})
+		console.log(res)
+
+		if (res.error) {
+			alert(res.error)
+		} else {
+			router.push('/home_person/home_person_search')
+		}
+	})
 
 	return (
 		<Modal
@@ -20,12 +46,12 @@ export const LoginStepOne = () => {
 				modal: styles.modal_content
 			}}
 		>
-			<div className={styles.content}>
+			<form onSubmit={onSubmit} className={styles.content}>
 				<Image priority src={MainIcon} alt="wakyruna" />
 				<h2>Inicia sesión como candidato</h2>
 				<div className={styles.content_inputs}>
-					<TextField label="Correo electronico" />
-					<TextField label="Contraseña" />
+					<TextField label="Correo electronico" type="email" name="email" register={register} />
+					<TextField label="Contraseña" type="password" name="password" register={register} />
 					<span
 						onClick={() => {
 							setStepOneState(false)
@@ -35,7 +61,7 @@ export const LoginStepOne = () => {
 					>
 						¿Olvidaste tu contraseña?
 					</span>
-					<Button> Iniciar Sesion</Button>
+					<Button type="submit"> Iniciar Sesion</Button>
 				</div>
 				<div
 					onClick={() => {
@@ -57,7 +83,7 @@ export const LoginStepOne = () => {
 					<span> Inicia sesión como empresa</span>
 					<a> aqui </a>
 				</div>
-			</div>
+			</form>
 		</Modal>
 	)
 }

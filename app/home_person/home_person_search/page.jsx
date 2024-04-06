@@ -3,11 +3,10 @@ import icHome from '@/public/icons/ic_Home.svg'
 import icLupa from '@/public/icons/ic_lupa.svg'
 import icNotes from '@/public/icons/ic_notes.svg'
 import icPerson from '@/public/icons/ic_person2.svg'
-import icStar from '@/public/icons/ic_star.svg'
 import icText from '@/public/icons/ic_text.svg'
-import Footer from '../components/footer/footer'
-import HeaderPortal from '../components/headerPortal/headerPortal'
-import LeftSidebar from '../components/leftSideBar/SideBar'
+import Footer from '../../components/footer/footer'
+import HeaderPortal from '../../components/headerPortal/headerPortal'
+import LeftSidebar from '../../components/leftSideBar/SideBar'
 import style from './home_person_search.module.css'
 const MOCK_LINKS = [{ name: 'Cerrar sesión', path: '/vacantes' }]
 const LINKS = [
@@ -15,7 +14,6 @@ const LINKS = [
 	{ image: icPerson, name: 'Mi perfil', path: '#' },
 	{ image: icLupa, name: 'Buscar trabajo', path: '#' },
 	{ image: icText, name: 'Contácta un asesor', path: '#' },
-	{ image: icStar, name: 'Inicio', path: '#' },
 	{ image: icNotes, name: 'Mis portulaciones', path: '/home_person_search' }
 ]
 

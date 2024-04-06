@@ -16,7 +16,7 @@ const LINKS = [
 	{ image: icPerson, name: 'Mi perfil', path: '/home_person_search' },
 	{ image: icLupa, name: 'Buscar trabajo', path: '/home_person_search' },
 	{ image: icText, name: 'Contácta un asesor', path: '/home_person_search' },
-	{ image: icNotes, name: 'Mis portulaciones', path: '/home_person_search' }
+	{ image: icNotes, name: 'Mis portulaciones', path: '/home_person/home_person_search' }
 ]
 export default function homePerson() {
 	return (

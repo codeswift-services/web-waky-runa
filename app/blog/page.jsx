@@ -12,10 +12,10 @@ import Scroll from '../components/scroll-icon/scroll-icon'
 import style from './blog.module.css'
 
 const MOCK_LINKS = [
-	{ name: 'Blog', path: '/blog' },
-	{ name: '¿Quienes somos?', path: '/about' },
 	{ name: 'Vacantes', path: '/vacantes' },
-	{ name: 'Inicia Sesíon', path: '/signin' }
+	{ name: 'Blog', path: '/blog' },
+	{ name: '¿Quienes somos?', path: '/about' }
+	// { name: 'Inicia Sesíon', path: '/signin' }
 ]
 
 export default function blog() {

@@ -9,10 +9,10 @@ import BaseTableFilter from '../components/table-filter/base-table-filter'
 import Table from '../components/table/table'
 import styles from './vacantes.module.css'
 const MOCK_LINKS = [
-	{ name: 'Blog', path: '/blog' },
-	{ name: '¿Quienes somos?', path: '/about' },
 	{ name: 'Vacantes', path: '/vacantes' },
-	{ name: 'Inicia Sesíon', path: '/signin' }
+	{ name: 'Blog', path: '/blog' },
+	{ name: '¿Quienes somos?', path: '/about' }
+	// { name: 'Inicia Sesíon', path: '/signin' }
 ]
 
 export default function Vacantes() {
