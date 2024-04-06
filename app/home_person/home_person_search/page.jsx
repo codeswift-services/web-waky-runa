@@ -1,4 +1,5 @@
 'use client'
+import LeftSidebar from '@/app/components/leftSideBar/SideBar'
 import icHome from '@/public/icons/ic_Home.svg'
 import icLupa from '@/public/icons/ic_lupa.svg'
 import icNotes from '@/public/icons/ic_notes.svg'
@@ -6,7 +7,6 @@ import icPerson from '@/public/icons/ic_person2.svg'
 import icText from '@/public/icons/ic_text.svg'
 import Footer from '../../components/footer/footer'
 import HeaderPortal from '../../components/headerPortal/headerPortal'
-import LeftSidebar from '../../components/leftSideBar/SideBar'
 import style from './home_person_search.module.css'
 const MOCK_LINKS = [{ name: 'Cerrar sesión', path: '/vacantes' }]
 const LINKS = [
