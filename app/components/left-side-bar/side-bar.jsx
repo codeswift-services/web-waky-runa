@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import style from './sideBar.module.css'
+import style from './side-bar.module.css'
 /**
  * @param {string[]} links - header links
  * @param {string} hasBackground - header links

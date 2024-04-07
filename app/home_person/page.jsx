@@ -9,7 +9,7 @@ import icText from '@/public/icons/ic_text.svg'
 import Image from 'next/image'
 
 import Footer from '../components/footer/footer'
-import HeaderPortal from '../components/headerPortal/headerPortal'
+import HeaderPortal from '../components/header-portal/header-portal'
 import LeftSidebar from '../components/left-side-bar/side-bar'
 import style from './home_person.module.css'
 
