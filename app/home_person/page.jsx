@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 import Footer from '../components/footer/footer'
 import HeaderPortal from '../components/headerPortal/headerPortal'
-import LeftSidebar from '../components/leftSideBar/SideBar'
+import LeftSidebar from '../components/left-side-bar/side-bar'
 import style from './home_person.module.css'
 
 const MOCK_LINKS = [{ name: 'Cerrar sesión', path: '/vacantes' }]

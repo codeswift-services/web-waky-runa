@@ -5,7 +5,7 @@ import MainIcon from '@/public/icons/ic_main_logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import styles from './headerPortal.module.css'
+import styles from './header-portal.module.css'
 
 /**
  * @param {string[]} links - header links
