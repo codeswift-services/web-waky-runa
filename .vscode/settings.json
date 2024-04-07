@@ -16,5 +16,8 @@
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
 	"discord.enabled": true,
-	"cSpell.words": ["wakyruna"]
+	"cSpell.words": ["wakyruna"],
+	"[dotenv]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	}
 }
