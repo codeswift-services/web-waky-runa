@@ -1,5 +1,5 @@
 'use client'
-import icHome from '@/public/icons/ic_Home.svg'
+import icHome from '@/public/icons/ic_home.svg'
 import icLupa from '@/public/icons/ic_lupa.svg'
 import icNotes from '@/public/icons/ic_notes.svg'
 import icPerson from '@/public/icons/ic_person2.svg'
