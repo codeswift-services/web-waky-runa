@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from './textLine.module.css'
+import styles from './text-line.module.css'
 
 const TextLine = ({ image, title }) => {
 	return (

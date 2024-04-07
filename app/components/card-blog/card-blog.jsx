@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import BackImage from '../../../public/icons/background.svg'
-import ButtonSecond from '../button-second/buttonSecond'
-import styles from './cardBlog.module.css'
+import ButtonSecond from '../button-second/button-second'
+import styles from './card-blog.module.css'
 
 const TextCard = ({ date, title, url }) => {
 	return (

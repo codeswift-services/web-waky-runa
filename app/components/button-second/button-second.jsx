@@ -1,6 +1,6 @@
 'use client'
 import PropTypes from 'prop-types'
-import styles from './buttonSecond.module.css'
+import styles from './button-second.module.css'
 
 const ButtonSecond = ({ children, url }) => {
 	const buttonText = children || 'Leer más'

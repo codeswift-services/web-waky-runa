@@ -18,7 +18,7 @@ import Image from 'next/image'
 import Footer from '../components/footer/footer'
 import Header from '../components/header/header'
 import Scroll from '../components/scroll-icon/scroll-icon'
-import TextLine from '../components/textLine/textLine'
+import TextLine from '../components/text-line/text-line'
 import style from './about.module.css'
 
 const MOCK_LINKS = [
